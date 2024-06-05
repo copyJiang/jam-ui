@@ -1,6 +1,6 @@
 module.exports = {
     //这里面路径最开始的/是指向.vuepress/public/的
-    base: '/',//部署站点的基础路径,默认/
+    base: '/jam-ui/',//部署站点的基础路径,默认/
     lang: 'zh-CN',//语言设置
     title: '你好， jam-ui ！',//所有页面标题的后缀，并且在默认主题的导航栏中显示
     description: '这是我的第一个组件库',//站点描述，它会被每个页面的 Frontmatter 中的 description 字段覆盖
