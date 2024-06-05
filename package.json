@@ -10,7 +10,8 @@
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --name jam_ui --target lib  --dest lib ./packages/index.js",
     "create": "node ./script/new-file.js",
-    "dev:press": "vuepress dev docs --debug"
+    "dev:press": "vuepress dev docs --debug",
+    "build:press": "vuepress build docs"
   },
   "dependencies": {
     "core-js": "^3.8.3",
