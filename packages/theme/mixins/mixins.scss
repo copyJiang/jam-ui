@@ -40,4 +40,37 @@
         box-shadow: 0px 0px 10px rgba($color: $background-color, $alpha: .4);
         outline: none;
     }
+
+    &.is-plain {
+        @include button-plain($background-color);
+    }
+}
+
+@mixin button-plain($color) {
+    color: $color;
+    border-color: mix(#fff, $color, 60%);
+    background-color: mix(#fff, $color, 90%);
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        border-color: $color;
+        background-color: $color;
+    }
+
+    &:active {
+        color: #fff;
+        border-color: mix(#000, $color, 10%);
+        background-color: mix(#000, $color, 10%);
+        outline: none
+    }
+
+}
+
+@mixin when($state) {
+    @at-root {
+        #{'&.is-' + $state} {
+            @content;
+        }
+    }
 }

@@ -1,5 +1,14 @@
 <template>
-  <button class="jam-button" :class="[type ? 'jam-button--' + type : '']">
+  <button
+    class="jam-button"
+    :class="[
+      type ? 'jam-button--' + type : '',
+      {
+        'is-plain': plain,
+        'is-round': round,
+      },
+    ]"
+  >
     <slot></slot>
   </button>
 </template>
@@ -11,6 +20,14 @@ export default {
     type: {
       type: String,
       default: "default",
+    },
+    plain: {
+      type: Boolean,
+      default: false,
+    },
+    round: {
+      type: Boolean,
+      default: false,
     },
   },
 };

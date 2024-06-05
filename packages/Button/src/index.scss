@@ -39,18 +39,44 @@
         outline: none;
     }
 
+    @include when(plain) {
+
+        &:hover,
+        &:focus {
+            background: $--color-white;
+            border-color: $--color-primary;
+            color: $--color-primary;
+        }
+
+        &:active {
+            background: $--color-white;
+            border-color: mix($--color-black, $--color-primary, 10%);
+            color: mix($--color-black, $--color-primary, 10%);
+            outline: none;
+        }
+    }
+
+    @include when(round) {
+        border-radius: 20px;
+        padding: 10px 16px;
+    }
+
     @include m(primary) {
         @include button-variant($--button-primary-font-color, $--button-primary-background-color, $--button-primary-border-color);
     }
+
     @include m(success) {
         @include button-variant($--button-success-font-color, $--button-success-background-color, $--button-success-border-color);
     }
+
     @include m(warning) {
         @include button-variant($--button-warning-font-color, $--button-warning-background-color, $--button-warning-border-color);
     }
+
     @include m(danger) {
         @include button-variant($--button-danger-font-color, $--button-danger-background-color, $--button-danger-border-color);
     }
+
     @include m(info) {
         @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
     }

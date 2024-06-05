@@ -1,7 +1,7 @@
 ---
 title: Button按钮
 date: 2024-06-05 14:32:14
-permalink: /pages/组件库文档/button
+permalink: /pages/button
 categories:
   - 组件库文档
   - button
