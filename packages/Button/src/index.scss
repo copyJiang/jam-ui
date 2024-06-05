@@ -1,0 +1,57 @@
+@import '../../theme/index.scss';
+
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $border-radius) {
+    padding: $padding-vertical $padding-horizontal;
+    font-size: $font-size;
+    border-radius: $border-radius;
+
+    &.is-round {
+        padding: $padding-vertical $padding-horizontal;
+    }
+}
+
+@include b(button) {
+    display: inline-block;
+    background: $--button-default-background-color;
+    color: $--button-default-font-color;
+    border-color: $--button-default-border-color ;
+    white-space: nowrap;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    transform: 1s;
+    border: $--border-base;
+    cursor: pointer;
+    line-height: 1;
+    margin: 0;
+    @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
+
+    &:hover,
+    &:focus {
+        color: $--color-primary;
+        border-color: $--color-primary-light-7;
+        background-color: $--color-primary-light-9;
+    }
+
+    &:active {
+        color: mix($--color-black, $--color-primary, 10%);
+        border-color: mix($--color-black, $--color-primary, 10%);
+        outline: none;
+    }
+
+    @include m(primary) {
+        @include button-variant($--button-primary-font-color, $--button-primary-background-color, $--button-primary-border-color);
+    }
+    @include m(success) {
+        @include button-variant($--button-success-font-color, $--button-success-background-color, $--button-success-border-color);
+    }
+    @include m(warning) {
+        @include button-variant($--button-warning-font-color, $--button-warning-background-color, $--button-warning-border-color);
+    }
+    @include m(danger) {
+        @include button-variant($--button-danger-font-color, $--button-danger-background-color, $--button-danger-border-color);
+    }
+    @include m(info) {
+        @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
+    }
+}

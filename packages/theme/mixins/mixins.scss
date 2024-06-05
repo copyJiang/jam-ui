@@ -1,0 +1,43 @@
+@mixin b($block) {
+    $B: $namespace+'-' +$block;
+
+    .#{$B} {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    $selector: &;
+    $currentSelector: '';
+
+    @each $unit in $modifier {
+        $currentSelector: #{$currentSelector + $selector + '--' + $unit + ','}
+    }
+
+    @at-root {
+        #{$currentSelector} {
+            @content;
+        }
+    }
+}
+
+@mixin button-variant($color, $background-color, $border-color) {
+    color: $color;
+    background-color: $background-color;
+    border-color: $border-color;
+
+    &:hover,
+    &:focus {
+        color: $color;
+        border-color: mix(#fff, $border-color, 10%);
+        background-color: mix(#fff, $background-color, 10%);
+    }
+
+    &:active {
+        color: mix(#000, $color, 10%);
+        border-color: mix(#000, $border-color, 10%);
+        background-color: mix(#000, $background-color, 10%);
+        box-shadow: 0px 0px 10px rgba($color: $background-color, $alpha: .4);
+        outline: none;
+    }
+}

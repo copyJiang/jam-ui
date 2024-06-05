@@ -1,18 +1,19 @@
 <template>
-  <div class="jam-button">
+  <button class="jam-button" :class="[type ? 'jam-button--' + type : '']">
     <slot></slot>
-  </div>
+  </button>
 </template>
 <script>
+import "./index.scss";
 export default {
-  name: "jarButton",
+  name: "jamButton",
+  props: {
+    type: {
+      type: String,
+      default: "default",
+    },
+  },
 };
 </script>
 <style scoped>
-.jam-button {
-  display: inline-block;
-  padding: 3px 6px;
-  background: #000;
-  color: #fff;
-}
 </style>
