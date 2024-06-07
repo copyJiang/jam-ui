@@ -1,10 +1,11 @@
 //package/index.js
 // 导入button组件
-import jamButton from "./Button";
+import jamButton from "./button";
+import jamRow from './row'
 // import BiuLoading from "./Loading";
 
 // 组件列表
-const components = [jamButton];
+const components = [jamButton, jamRow];
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，那么所有的组件都会被注册
 const install = function (Vue) {
@@ -16,7 +17,7 @@ const install = function (Vue) {
 //这里export default是提供给全局引入使用
 export default {
   install,
-  jamButton
+  jamButton, jamRow
 };
 //这里export是提供给按需引入使用
-export { jamButton };
+export { jamButton, jamRow };

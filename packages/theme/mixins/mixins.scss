@@ -1,5 +1,5 @@
 @mixin b($block) {
-    $B: $namespace+'-' +$block;
+    $B: $namespace+ '-' +$block;
 
     .#{$B} {
         @content;
@@ -44,6 +44,20 @@
     &.is-plain {
         @include button-plain($background-color);
     }
+
+    &.is-disabled {
+
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+            box-shadow: 0px 0px 0px transparent;
+            color: mix(#fff, $color, 50%);
+            background-color: mix(#fff, $background-color, 50%);
+            border-color: mix(#fff, $border-color, 50%);
+        }
+
+    }
 }
 
 @mixin button-plain($color) {
@@ -65,6 +79,18 @@
         outline: none
     }
 
+    &.is-disabled {
+
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+            box-shadow: 0px 0px 0px transparent;
+            color: mix(#fff, $color, 30%);
+            border-color: mix(#fff, $color, 60%);
+            background-color: mix(#fff, $color, 90%);
+        }
+    }
 }
 
 @mixin when($state) {

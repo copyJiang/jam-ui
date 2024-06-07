@@ -5,25 +5,29 @@
     font-size: $font-size;
     border-radius: $border-radius;
 
-    &.is-round {
-        padding: $padding-vertical $padding-horizontal;
-    }
+    // &.is-round {
+    //     padding: $padding-vertical $padding-horizontal;
+    // }
 }
 
 @include b(button) {
+
     display: inline-block;
     background: $--button-default-background-color;
     color: $--button-default-font-color;
     border-color: $--button-default-border-color ;
+    border: $--border-base;
     white-space: nowrap;
     text-align: center;
-    box-sizing: border-box;
+    box-sizing: content-box;
     outline: none;
-    transform: 1s;
-    border: $--border-base;
+    transform: .1s;
+    -webkit-appearance: none;
     cursor: pointer;
     line-height: 1;
     margin: 0;
+    font-weight: 500;
+    height: 20px;
     @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
 
     &:hover,
@@ -36,24 +40,25 @@
     &:active {
         color: mix($--color-black, $--color-primary, 10%);
         border-color: mix($--color-black, $--color-primary, 10%);
+        box-shadow: 0px 0px 10px rgba($color: $--color-primary, $alpha: .4);
         outline: none;
     }
 
-    @include when(plain) {
+    @include when(disabled) {
 
+        &,
         &:hover,
         &:focus {
-            background: $--color-white;
-            border-color: $--color-primary;
-            color: $--color-primary;
+            box-shadow: 0px 0px 0px transparent;
+            color: $--color-text-placeholder;
+            background-color: $--color-white;
+            border-color: $--color-primary-light-9;
+            cursor: not-allowed;
         }
+    }
 
-        &:active {
-            background: $--color-white;
-            border-color: mix($--color-black, $--color-primary, 10%);
-            color: mix($--color-black, $--color-primary, 10%);
-            outline: none;
-        }
+    @include when(dashed) {
+        border: $--border-width-base dashed $--border-color-base;
     }
 
     @include when(round) {
@@ -79,5 +84,21 @@
 
     @include m(info) {
         @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
+    }
+
+    @include m(large) {
+        @include button-size($--button-large-padding-vertical, $--button-large-padding-horizontal, $--button-large-font-size, $--button-border-radius);
+    }
+
+    @include m(medium) {
+        @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
+    }
+
+    @include m(small) {
+        @include button-size($--button-small-padding-vertical, $--button-small-padding-horizontal, $--button-small-font-size, $--button-border-radius);
+    }
+
+    @include m(mini) {
+        @include button-size($--button-mini-padding-vertical, $--button-mini-padding-horizontal, $--button-mini-font-size, $--button-border-radius);
     }
 }

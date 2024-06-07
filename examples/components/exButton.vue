@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2>基础</h2>
     <main>
+      <h2>基础</h2>
       <section>
         <jam-button type="default">default</jam-button>
         <jam-button type="primary">primary</jam-button>
@@ -25,6 +25,51 @@
         <jam-button type="warning" round>warning</jam-button>
         <jam-button type="danger" round>danger</jam-button>
         <jam-button type="info" round>info</jam-button>
+      </section>
+    </main>
+    <main>
+      <h2>虚线按钮</h2>
+      <section>
+        <jam-button type="default" dashed plain>default</jam-button>
+        <jam-button type="primary" dashed plain>primary</jam-button>
+        <jam-button type="success" dashed plain>success</jam-button>
+        <jam-button type="warning" dashed plain>warning</jam-button>
+        <jam-button type="danger" dashed plain>danger</jam-button>
+        <jam-button type="info" dashed plain>info</jam-button>
+      </section>
+    </main>
+    <main>
+      <h2>禁用按钮</h2>
+      <section>
+        <jam-button type="default" disabled>default</jam-button>
+        <jam-button type="primary" disabled>primary</jam-button>
+        <jam-button type="success" disabled>success</jam-button>
+        <jam-button type="warning" disabled>warning</jam-button>
+        <jam-button type="danger" disabled>danger</jam-button>
+        <jam-button type="info" disabled>info</jam-button>
+      </section>
+      <section>
+        <jam-button type="default" disabled plain>default</jam-button>
+        <jam-button type="primary" disabled plain>primary</jam-button>
+        <jam-button type="success" disabled plain>success</jam-button>
+        <jam-button type="warning" disabled plain>warning</jam-button>
+        <jam-button type="danger" disabled plain>danger</jam-button>
+        <jam-button type="info" disabled plain>info</jam-button>
+      </section>
+    </main>
+    <main>
+      <h2>尺寸</h2>
+      <section>
+        <jam-button size="large">large</jam-button>
+        <jam-button size="medium">medium</jam-button>
+        <jam-button size="small">small</jam-button>
+        <jam-button size="mini">mini</jam-button>
+      </section>
+      <section>
+        <jam-button size="large" round>large</jam-button>
+        <jam-button size="medium">medium</jam-button>
+        <jam-button size="small">small</jam-button>
+        <jam-button size="mini">mini</jam-button>
       </section>
     </main>
   </div>

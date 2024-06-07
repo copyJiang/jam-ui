@@ -29,7 +29,8 @@ const build = async () => {
       name: "componentName",
     },
   ]);
-  const ComponentName = uppercamelcase(res2.componentName);
+  const ComponentName = res2.componentName
+  // const ComponentName = uppercamelcase(res2.componentName);
   const componentPath = path.resolve(__dirname, "../packages", ComponentName);
   const files = [
     { fileName: "index.js", content: data2 },

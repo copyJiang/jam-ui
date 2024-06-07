@@ -3,13 +3,16 @@
     class="jam-button"
     :class="[
       type ? 'jam-button--' + type : '',
+      size ? 'jam-button--' + size : '',
       {
         'is-plain': plain,
         'is-round': round,
+        'is-dashed': dashed,
+        'is-disabled': disabled,
       },
     ]"
   >
-    <slot></slot>
+    <span><slot></slot></span>
   </button>
 </template>
 <script>
@@ -28,6 +31,18 @@ export default {
     round: {
       type: Boolean,
       default: false,
+    },
+    dashed: {
+      type: Boolean,
+      default: false,
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    size: {
+      type: String,
+      default: "medium",
     },
   },
 };

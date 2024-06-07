@@ -34,29 +34,36 @@ $--background-color-base: #F5F7FA;
 
 $--border-width-base: 1px;
 $--border-style-base: solid;
-$--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
+$--border-base: $--border-width-base $--border-style-base $--border-color-base;
 $--border-radius-base: 4px;
 $--border-radius-small: 2px;
 $--border-radius-circle: 100%;
 $--border-radius-zero: 0;
 
-$--font-size-extra-large: 20px;
-$--font-size-large: 18px;
-$--font-size-medium: 16px;
-$--font-size-base: 14px;
+$--font-size-large: 16px;
+$--font-size-medium: 14px;
 $--font-size-small: 13px;
-$--font-size-extra-small: 12px;
+$--font-size-mini: 12px;
 
 $--font-weight-primary: 500;
 
 /**
     button-按钮
 */
-$--button-font-size: $--font-size-base;
+$--button-font-size: $--font-size-medium;
 $--button-font-weight: $--font-weight-primary;
 $--button-border-radius: $--border-radius-base;
 $--button-padding-vertical: 10px;
 $--button-padding-horizontal: 16px;
+$--button-large-font-size: $--font-size-large;
+$--button-large-padding-vertical: 12px;
+$--button-large-padding-horizontal: 20px;
+$--button-small-font-size: $--font-size-small;
+$--button-small-padding-vertical: 8px;
+$--button-small-padding-horizontal: 14px;
+$--button-mini-font-size: $--font-size-mini;
+$--button-mini-padding-vertical: 6px;
+$--button-mini-padding-horizontal: 12px;
 $--button-default-font-color: $--color-text-common;
 $--button-default-background-color: $--color-white;
 $--button-default-border-color: $--border-color-base;
