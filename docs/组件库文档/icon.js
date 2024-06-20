@@ -1,0 +1,3 @@
+[
+    "jam-icon-arrow-down"
+]

@@ -9,16 +9,22 @@
         'is-round': round,
         'is-dashed': dashed,
         'is-disabled': disabled,
+        'is-text': text,
+        'is-loading': loading,
       },
     ]"
   >
-    <span><slot></slot></span>
+    <i v-if="loading" class="iconfont jam-icon-loading"></i>
+    <span>
+      <slot></slot>
+    </span>
   </button>
 </template>
 <script>
 import "./index.scss";
 export default {
   name: "jamButton",
+  components: {},
   props: {
     type: {
       type: String,
@@ -44,8 +50,21 @@ export default {
       type: String,
       default: "medium",
     },
+    text: {
+      type: Boolean,
+      default: false,
+    },
+    icon: {
+      type: String,
+      default: "",
+    },
+    loading: {
+      type: Boolean,
+      default: true,
+    },
   },
 };
 </script>
 <style scoped>
+/* @import url('./index.scss'); */
 </style>

@@ -67,9 +67,27 @@
       </section>
       <section>
         <jam-button size="large" round>large</jam-button>
-        <jam-button size="medium">medium</jam-button>
-        <jam-button size="small">small</jam-button>
-        <jam-button size="mini">mini</jam-button>
+        <jam-button size="medium" round>medium</jam-button>
+        <jam-button size="small" round>small</jam-button>
+        <jam-button size="mini" round>mini</jam-button>
+      </section>
+    </main>
+
+    <main>
+      <h2>文字按钮</h2>
+      <section>
+        <jam-button size="large" text>large</jam-button>
+        <jam-button size="medium" text>medium</jam-button>
+        <jam-button size="small" text>small</jam-button>
+        <jam-button size="mini" text>mini</jam-button>
+      </section>
+      <section>
+        <jam-button type="default" text>default</jam-button>
+        <jam-button type="primary" text>primary</jam-button>
+        <jam-button type="success" text>success</jam-button>
+        <jam-button type="warning" text>warning</jam-button>
+        <jam-button type="danger" text>danger</jam-button>
+        <jam-button type="info" text>info</jam-button>
       </section>
     </main>
   </div>

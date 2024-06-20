@@ -13,7 +13,7 @@ module.exports = {
     themeConfig: {
         repo: 'https://github.com/jiang-cj/jam-ui',
         repoLabel: 'Github',
-        lastUpdated:false,
+        lastUpdated: false,
         logo: '/images/logo.PNG',
         nav: [
             { text: "首页", link: "/" },
@@ -23,7 +23,7 @@ module.exports = {
             }
         ],
         sidebar: { // 配置侧边栏部分
-            '/组件库文档/':['/组件库文档/','/组件库文档/button.md', '/组件库文档/loading.md']
-          }
+            '/组件库文档/': ['/组件库文档/', '/组件库文档/icon.md', '/组件库文档/button.md',]
+        }
     }
 }

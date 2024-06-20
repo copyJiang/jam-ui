@@ -1,17 +1,46 @@
 <template>
-  <div>模板</div>
+  <i :class="classes" :style="styles"></i>
 </template>
   
   <script>
+import "./iconfont.css";
+
 export default {
+  name: "jamIcon",
+  props: {
+    name: {//图标类别
+      type: String,
+      default: "",
+    },
+    fontSize: {//图标大小
+      type: Number,
+      default: 16,
+    },
+    color: { //图标颜色
+      type: String,
+      default: "#606266",
+    },
+  },
   data() {
-    return {};
+    return {
+      prefixaClss: "iconfont",
+    };
   },
   created() {},
-  computed: {},
+  computed: {
+    classes() {
+      return [`${this.prefixaClss} ${this.name}`];
+    },
+    styles() {
+      return {
+        fontSize: this.fontSize + "px",
+        color: this.color,
+      };
+    },
+  },
   methods: {},
 };
 </script>
   
-  <style lang="scss" scoped></style>
+  <style lang="scss"></style>
   

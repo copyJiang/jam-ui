@@ -26,6 +26,8 @@
     background-color: $background-color;
     border-color: $border-color;
 
+
+
     &:hover,
     &:focus {
         color: $color;
@@ -39,6 +41,26 @@
         background-color: mix(#000, $background-color, 10%);
         box-shadow: 0px 0px 10px rgba($color: $background-color, $alpha: .4);
         outline: none;
+    }
+
+    &.is-text {
+        border-width: 0;
+        color: $--button-default-font-color;
+        box-shadow: none;
+
+        &:hover,
+        &:focus {
+            color: $background-color;
+            border-color: transparent;
+            background-color: transparent;
+        }
+
+        &:active {
+            color: $background-color;
+            border-color: transparent;
+            background-color: transparent;
+            outline: none;
+        }
     }
 
     &.is-plain {
