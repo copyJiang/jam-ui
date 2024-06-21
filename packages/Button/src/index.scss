@@ -9,6 +9,8 @@
 @include b(button) {
 
     display: inline-block;
+    display: flex;
+    align-items: center;
     background: $--button-default-background-color;
     color: $--button-default-font-color;
     border-color: $--button-default-border-color ;
@@ -25,6 +27,16 @@
     font-weight: 500;
     height: 20px;
     @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
+
+    &+& {
+        margin-left: 10px;
+    }
+
+    & [class*="jam-"] {
+        &+span {
+            margin-left: 5px;
+        }
+    }
 
     &:hover,
     &:focus {

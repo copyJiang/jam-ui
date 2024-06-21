@@ -14,7 +14,8 @@
       },
     ]"
   >
-    <i v-if="loading" class="iconfont jam-icon-loading"></i>
+    <i v-if="icon && !loading" :class="iconClass"></i>
+    <i v-if="loading" style="font-size: 14px" class="iconfont jam-loading"></i>
     <span>
       <slot></slot>
     </span>
@@ -60,7 +61,12 @@ export default {
     },
     loading: {
       type: Boolean,
-      default: true,
+      default: false,
+    },
+  },
+  computed: {
+    iconClass() {
+      return this.icon ? `iconfont ${this.icon}` : "";
     },
   },
 };

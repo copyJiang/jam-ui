@@ -15,11 +15,11 @@ tags:
 ::: demo
 ```html
 
-<jam-icon :font-size="32" color='red' name="jam-icon-arrow-down" />
-<jam-icon :font-size="32" name="jam-icon-arrow-alt" />
-<jam-icon :font-size="32" name="jam-icon-arrow-up" />
-<jam-icon :font-size="32" name="jam-icon-bell" />
-<jam-icon :font-size="32" name="jam-icon-camera" />
+<jam-icon :font-size="32" color='red' name="jam-loading" />
+<jam-icon :font-size="32" name="jam-arrow-down" />
+<jam-icon :font-size="32" name="jam-arrow-alt" />
+<jam-icon :font-size="32" name="jam-arrow-up" />
+<jam-icon :font-size="32" name="jam-bell" />
 
 ```
 :::
@@ -31,10 +31,10 @@ tags:
 ::: demo
 ```html
 <ul class="icon-list">
-  <li v-for="name in icons" :key="name">
+  <li v-for="item in icons" :key="item">
     <span>
-      <jam-icon :font-size="32" :name="name"></jam-icon>
-      <span>{{name}}</span>
+      <jam-icon :font-size="36" :name="item" />
+      <span>{{ item }}</span>
     </span>
   </li>
 </ul>
@@ -43,86 +43,88 @@ tags:
     data(){
       return{
       icons: [
-        "jam-icon-arrow-down",
-        "jam-icon-arrow-alt",
-        "jam-icon-arrow-up",
-        "jam-icon-bell",
-        "jam-icon-camera",
-        "jam-icon-check",
-        "jam-icon-circle-check",
-        "jam-icon-circle-close",
-        "jam-icon-close",
-        "jam-icon-cloud-download",
-        "jam-icon-cloud-upload",
-        "jam-icon-copy",
-        "jam-icon-db-arrow-left",
-        "jam-icon-date",
-        "jam-icon-db-arrow-right",
-        "jam-icon-delete",
-        "jam-icon-down",
-        "jam-icon-down-circle",
-        "jam-icon-download",
-        "jam-icon-environment",
-        "jam-icon-eye",
-        "jam-icon-file-add",
-        "jam-icon-file-excel",
-        "jam-icon-file-jpg",
-        "jam-icon-file-pdf",
-        "jam-icon-filter",
-        "jam-icon-folder",
-        "jam-icon-file-text",
-        "jam-icon-folder-add",
-        "jam-icon-heart-off",
-        "jam-icon-folder-open",
-        "jam-icon-home",
-        "jam-icon-inbox",
-        "jam-icon-left",
-        "jam-icon-information",
-        "jam-icon-laptop",
-        "jam-icon-left-circle",
-        "jam-icon-left-square",
-        "jam-icon-login",
-        "jam-icon-menu-fold",
-        "jam-icon-menu-unfold",
-        "jam-icon-mail",
-        "jam-icon-map",
-        "jam-icon-message",
-        "jam-icon-minus-circle",
-        "jam-icon-pause-circle",
-        "jam-icon-link",
-        "jam-icon-play-circle",
-        "jam-icon-picture",
-        "jam-icon-question-circle",
-        "jam-icon-right",
-        "jam-icon-safety",
-        "jam-icon-reload",
-        "jam-icon-poweroff",
-        "jam-icon-plus-circle",
-        "jam-icon-right-circle",
-        "jam-icon-search",
-        "jam-icon-shrink",
-        "jam-icon-stop",
-        "jam-icon-share",
-        "jam-icon-swap",
-        "jam-icon-tag",
-        "jam-icon-time",
-        "jam-icon-setting",
-        "jam-icon-up",
-        "jam-icon-unlock",
-        "jam-icon-user",
-        "jam-icon-up-circle",
-        "jam-icon-upload",
-        "jam-icon-verticle-right",
-        "jam-icon-user-add",
-        "jam-icon-usergroup-delete",
-        "jam-icon-usergroup-add",
-        "jam-icon-user-delete",
-        "jam-icon-verification",
-        "jam-icon-warning",
-        "jam-icon-zoom-in",
-        "jam-icon-wifi",
-        "jam-icon-video-camera",
-        "jam-icon-zoom-out",
+        "jam-loading",
+        "jam-loading-strange",
+        "jam-arrow-down",
+        "jam-arrow-alt",
+        "jam-arrow-up",
+        "jam-bell",
+        "jam-camera",
+        "jam-check",
+        "jam-check-circle",
+        "jam-close-circle",
+        "jam-close",
+        "jam-cloud-download",
+        "jam-cloud-upload",
+        "jam-copy",
+        "jam-double-arrow-left",
+        "jam-date",
+        "jam-double-arrow-right",
+        "jam-delete",
+        "jam-down",
+        "jam-down-circle",
+        "jam-download",
+        "jam-environment",
+        "jam-eye",
+        "jam-file-add",
+        "jam-file-excel",
+        "jam-file-jpg",
+        "jam-file-pdf",
+        "jam-filter",
+        "jam-folder",
+        "jam-file-text",
+        "jam-folder-add",
+        "jam-heart-off",
+        "jam-folder-open",
+        "jam-home",
+        "jam-inbox",
+        "jam-left",
+        "jam-information-circle",
+        "jam-laptop",
+        "jam-left-circle",
+        "jam-left-square",
+        "jam-login",
+        "jam-menu-fold",
+        "jam-menu-unfold",
+        "jam-mail",
+        "jam-map",
+        "jam-message",
+        "jam-minus-circle",
+        "jam-pause-circle",
+        "jam-link",
+        "jam-play-circle",
+        "jam-picture",
+        "jam-question-circle",
+        "jam-right",
+        "jam-safety",
+        "jam-reload",
+        "jam-poweroff",
+        "jam-plus-circle",
+        "jam-right-circle",
+        "jam-search",
+        "jam-shrink",
+        "jam-stop",
+        "jam-share",
+        "jam-swap",
+        "jam-tag",
+        "jam-time",
+        "jam-setting",
+        "jam-up",
+        "jam-unlock",
+        "jam-user",
+        "jam-up-circle",
+        "jam-upload",
+        "jam-verticle-right",
+        "jam-user-add",
+        "jam-usergroup-delete",
+        "jam-usergroup-add",
+        "jam-user-delete",
+        "jam-verification",
+        "jam-warning",
+        "jam-zoom-in",
+        "jam-wifi",
+        "jam-video-camera",
+        "jam-zoom-out",
       ],
       }
     },
@@ -137,8 +139,8 @@ tags:
   display: flex;
   flex-wrap: wrap;
   li {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border: 1px solid #eee;
     text-align: center;
     vertical-align: middle;
@@ -166,7 +168,7 @@ tags:
       > span {
         display: inline-block;
         font-size: 14px;
-        height: 50px;
+        height: 60px;
         padding: 0 4px;
         color: rgb(153, 169, 191);
       }

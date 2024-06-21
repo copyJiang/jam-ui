@@ -1,3 +1,6 @@
 /examples/
 /node_modules/
 /packages/
+/docs/
+/script/
+node_modules.zip

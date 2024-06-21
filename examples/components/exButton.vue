@@ -90,7 +90,64 @@
         <jam-button type="info" text>info</jam-button>
       </section>
     </main>
+
+    <main>
+      <h2>加载中</h2>
+      <section>
+        <jam-button type="default" loading>default</jam-button>
+        <jam-button type="primary" loading>primary</jam-button>
+        <jam-button type="success" loading>success</jam-button>
+        <jam-button type="warning" loading>warning</jam-button>
+        <jam-button type="danger" loading>danger</jam-button>
+        <jam-button type="info" loading>info</jam-button>
+      </section>
+      <section>
+        <jam-button type="default" plain loading>default</jam-button>
+        <jam-button type="primary" plain loading>primary</jam-button>
+        <jam-button type="success" plain loading>success</jam-button>
+        <jam-button type="warning" plain loading>warning</jam-button>
+        <jam-button type="danger" plain loading>danger</jam-button>
+        <jam-button type="info" plain loading>info</jam-button>
+      </section>
+      <section>
+        <jam-button type="default" round loading>default</jam-button>
+        <jam-button type="primary" round loading>primary</jam-button>
+        <jam-button type="success" round loading>success</jam-button>
+        <jam-button type="warning" round loading>warning</jam-button>
+        <jam-button type="danger" round loading>danger</jam-button>
+        <jam-button type="info" round loading>info</jam-button>
+      </section>
+    </main>
+
+    <main>
+      <h2>图标</h2>
+      <section>
+        <jam-button type="default" icon="jam-check">default</jam-button>
+        <jam-button type="primary" icon="jam-eye">primary</jam-button>
+        <jam-button type="success" icon="jam-home">success</jam-button>
+        <jam-button type="warning" icon="jam-map">warning</jam-button>
+        <jam-button type="danger" icon="jam-reload">danger</jam-button>
+        <jam-button type="info" icon="jam-tag">info</jam-button>
+      </section>
+      <section>
+        <jam-button type="default" plain icon="jam-check">default</jam-button>
+        <jam-button type="primary" plain icon="jam-eye">primary</jam-button>
+        <jam-button type="success" plain icon="jam-home">success</jam-button>
+        <jam-button type="warning" plain icon="jam-map">warning</jam-button>
+        <jam-button type="danger" plain icon="jam-reload">danger</jam-button>
+        <jam-button type="info" plain icon="jam-tag">info</jam-button>
+      </section>
+      <section>
+        <jam-button type="default" round icon="jam-check">default</jam-button>
+        <jam-button type="primary" round icon="jam-eye">primary</jam-button>
+        <jam-button type="success" round icon="jam-home">success</jam-button>
+        <jam-button type="warning" round icon="jam-map">warning</jam-button>
+        <jam-button type="danger" round icon="jam-reload">danger</jam-button>
+        <jam-button type="info" round icon="jam-tag">info</jam-button>
+      </section>
+    </main>
   </div>
+
 </template>
 <script>
 export default {
